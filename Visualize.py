@@ -86,7 +86,7 @@ input_txt = ''
 with open(OUTPUT_FILE, 'r') as content_file:
     input_txt = content_file.read()
 for i in input_txt.split('\n'):
-    if map.draw_child(i):
+    if not map.draw_child(i):
         time.sleep(0.1)
         map.clean()
 
